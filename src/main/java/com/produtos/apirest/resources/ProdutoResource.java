@@ -29,4 +29,14 @@ public class ProdutoResource {
         return (produtoRepository.save(produto));
     }
 
+    @DeleteMapping("/produto")
+    public void deltaProduto(@RequestBody Produto produto) {
+        produtoRepository.delete(produto);
+    }
+
+    @PutMapping("/produto")
+    public Produto atalizaProduto(@RequestBody Produto produto) {
+        return (produtoRepository.save(produto));
+    }
+
 }
